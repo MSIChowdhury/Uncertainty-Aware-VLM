@@ -629,16 +629,7 @@ Our findings provide actionable insights for deploying VLMs in safety-critical r
 
 ### 7.1 Code and Data Availability
 
-All code, data processing scripts, trained models, and evaluation tools are available at:
-**GitHub Repository**: [https://github.com/YOUR_USERNAME/vlm-failure-detection](https://github.com/YOUR_USERNAME/vlm-failure-detection)
-
-**Repository Contents**:
-- Complete training and evaluation code
-- BridgeData V2 processing pipeline
-- Monte Carlo Dropout and Temperature Scaling implementations
-- All analysis and visualization scripts
-- Docker container for reproducible environment
-- Trained model checkpoints (available upon request)
+All code, data processing scripts, trained models, and evaluation tools are not readily available at this time but can be shared upon reasonable request.
 
 ### 7.2 Hardware and Software Requirements
 
