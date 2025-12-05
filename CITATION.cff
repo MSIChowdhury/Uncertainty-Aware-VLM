@@ -1,8 +1,36 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "Chowdhury"
-  given-names: "MD. Sameer Iqbal"
-title: "Uncertainty-Aware VLM Failure Detection"
-date-released: 2025-12-05
+  - family-names: "Chowdhury"
+    given-names: "MD Sameer Iqbal"
+    affiliation: "Texas State University"
+    orcid: "https://orcid.org/0009-0007-4372-4366"  # Add your ORCID if you have one
+  - family-names: "Au"
+    given-names: "Tsz-Chiu"
+    affiliation: "Texas State University"
+    orcid: "https://orcid.org/0009-0004-6137-1056"  # Add Dr. Au's ORCID if available
+title: "Uncertainty-Aware VLM Failure Detection: Enabling Reliable Human-AI Collaboration in Robot Manipulation"
+version: 1.0.0
+date-released: 2024-12-05
 url: "https://github.com/MSIChowdhury/Uncertainty-Aware-VLM"
+repository-code: "https://github.com/MSIChowdhury/Uncertainty-Aware-VLM"
+keywords:
+  - "Vision-Language Models"
+  - "Uncertainty Quantification"
+  - "Robot Learning"
+  - "Human-AI Collaboration"
+  - "Monte Carlo Dropout"
+  - "Temperature Scaling"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Chowdhury"
+      given-names: "MD Sameer Iqbal"
+    - family-names: "Au"
+      given-names: "Tsz-Chiu"
+  title: "Uncertainty-Aware VLM Failure Detection"
+  year: 2024
+  department: "Department of Computer Science"
+  institution:
+    name: "Texas State University"
