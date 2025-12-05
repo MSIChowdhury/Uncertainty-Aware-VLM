@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Chowdhury"
+  given-names: "MD. Sameer Iqbal"
+title: "Uncertainty-Aware VLM Failure Detection"
+date-released: 2025-12-05
+url: "https://github.com/MSIChowdhury/Uncertainty-Aware-VLM"
