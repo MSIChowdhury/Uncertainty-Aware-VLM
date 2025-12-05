@@ -1,6 +1,5 @@
-# Uncertainty-Aware VLM Failure Detection: Enabling Reliable Human-AI Collaboration in Robot Manipulation
+# Uncertainty-Aware VLM Failure Detection
 
-**A Comprehensive Study of Vision-Language Model Calibration for Robotic Task Completion Prediction**
 
 ---
 
