@@ -2,6 +2,18 @@
 
 ---
 
+**Authors:**  
+MD Sameer Iqbal Chowdhury (PhD Student)  
+Tsz-Chiu Au, Ph.D. (Associate Professor)
+
+**Affiliation:**  
+Department of Computer Science  
+Texas State University
+
+**Contact:** vsj23@txstate.edu, chiu.au@txstate.edu
+
+---
+
 ## Abstract
 
 Autonomous robotic systems require reliable mechanisms to determine when to request human intervention during task execution. This work presents a comprehensive investigation of uncertainty quantification methods for Vision-Language Models (VLMs) applied to robot manipulation failure detection. We evaluate four state-of-the-art VLMs (CLIP, SmolVLM, Qwen2-VL, MiniGPT-4, Florence-2) alongside a CNN baseline (ResNet50) on the BridgeData V2 dataset containing 2,872 robot manipulation trajectories. Through systematic application of Monte Carlo Dropout and Temperature Scaling calibration, we demonstrate that uncertainty-aware deferral strategies can achieve 95.1% accuracy while automating 59.4% of decisions (MiniGPT-4). Our analysis reveals critical insights into class imbalance challenges, with all models exhibiting 18-27% performance gaps between success detection (90-99% accuracy) and failure detection (71-84% accuracy). We provide actionable recommendations for deploying VLMs in safety-critical robotic applications where incorrect predictions carry physical consequences.
@@ -725,8 +737,9 @@ All code, data processing scripts, trained models, and evaluation tools are not 
 
 **Figure A1: Detailed Confusion Matrices for All Models**
 
-See `figures/05_confusion_matrices.png` for visual representation.
+![Confusion Matrices](figures/05_confusion_matrices.png)
 
+**Numerical Breakdown:**
 ```
 MiniGPT-4 (89.33% accuracy):
                 Predicted
@@ -769,15 +782,21 @@ Actual Success  170 (83%) 36 (17%)
 
 **Figure A2: Calibration Curves for All Models**
 
-See `figures/08_calibration_plots.png` for complete reliability diagrams showing predicted confidence vs. actual accuracy for all models before and after temperature scaling.
+![Calibration Plots](figures/08_calibration_plots.png)
+
+*Reliability diagrams showing predicted confidence vs. actual accuracy for all models before and after temperature scaling. The diagonal dashed line represents perfect calibration. Points below the diagonal indicate overconfidence, while points above indicate underconfidence.*
 
 ### A.4 Learning Curves
 
 **Figure A3: Training Dynamics for All Models**
 
-See `figures/02_training_dynamics.png` and `figures/10_training_stability.png` for complete training and validation loss/accuracy curves over epochs, including learning rate schedules and gradient norms.
+![Training Dynamics](figures/02_training_dynamics.png)
 
----
+*Training and validation accuracy/loss curves over epochs for all six models.*
+
+![Training Stability](figures/10_training_stability.png)
+
+*Training stability metrics including loss curves, learning rate schedules, and gradient norms. These plots help diagnose optimization issues and verify proper convergence.*
 
 ## Appendix B: Implementation Details
 
@@ -856,10 +875,8 @@ def calibrate_temperature(model, val_loader):
 
 ## Acknowledgments
 
-We thank the BridgeData V2 team at UC Berkeley for providing the robot manipulation dataset. We acknowledge HuggingFace for pre-trained VLM implementations and NVIDIA for providing the PyTorch Docker containers. This work was conducted as part of a PhD rotation project at [Your Institution].
+We thank the BridgeData V2 team at UC Berkeley for providing the robot manipulation dataset. We acknowledge HuggingFace for pre-trained VLM implementations and NVIDIA for providing the PyTorch Docker containers. This work was conducted as part of a PhD rotation project for CS7300 (Introduction to Research in Computer Science) at Texas State University.
 
 ---
 
-**Contact**: [Your Email]  
-**Project Page**: [Your GitHub Repository]  
-**Last Updated**: December 2024
+**Contact**: [vsj23@txstate.edu]
