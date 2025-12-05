@@ -369,7 +369,7 @@ where:
 3. **Heuristic label noise**: Success heuristics may be more reliable than failure heuristics
 4. **Training dynamics**: Easier to learn "success" visual patterns
 
-![Figure 1: Per-Class Accuracy Comparison](plots/06_class_imbalance.png)
+![Figure 1: Per-Class Accuracy Comparison](figures/06_class_imbalance.png)
 *Figure 1: All models show significant accuracy gaps between success (green) and failure (red) detection, with CLIP exhibiting the most balanced performance.*
 
 ### 4.2 Uncertainty Quantification Results
@@ -395,7 +395,7 @@ where:
 
 **Statistical Significance**: Mann-Whitney U test shows p < 0.001 for uncertainty difference between correct vs. incorrect predictions across all models.
 
-![Figure 2: MC Dropout Uncertainty Distributions](plots/09_uncertainty.png)
+![Figure 2: MC Dropout Uncertainty Distributions](figures/09_uncertainty.png)
 *Figure 2: Predictive entropy distributions for correct (green) vs. incorrect (red) predictions. Models with better separation (e.g., MiniGPT-4) enable more effective uncertainty-based deferral.*
 
 #### 4.2.2 Temperature Scaling Calibration
@@ -418,7 +418,7 @@ where:
 4. **Larger models more overconfident**: SmolVLM, Qwen2-VL require higher temperatures
 5. **Temperature Scaling highly effective**: Simple post-processing dramatically improves calibration
 
-![Figure 3: Calibration Curves - Before and After Temperature Scaling](plots/08_calibration_plots.png)
+![Figure 3: Calibration Curves - Before and After Temperature Scaling](figures/08_calibration_plots.png)
 *Figure 3: Reliability diagrams showing predicted confidence vs. actual accuracy. Temperature Scaling moves predictions closer to the perfect calibration diagonal (dashed line), reducing overconfidence.*
 
 ### 4.3 Human Deferral System
@@ -456,7 +456,7 @@ Assuming human labeling costs $0.50/sample and model inference costs $0.01/sampl
 
 **Recommendation**: MiniGPT-4 offers optimal cost-accuracy tradeoff for production deployment.
 
-![Figure 4: Human Deferral System Performance](plots/13_human_deferral_system.png)
+![Figure 4: Human Deferral System Performance](figures/13_human_deferral_system.png)
 *Figure 4: Expected accuracy vs. automation rate for different uncertainty thresholds. MiniGPT-4 (blue) achieves highest automation while maintaining 95%+ accuracy. Shaded regions show 95% confidence intervals.*
 
 ### 4.4 Ablation Studies
@@ -734,7 +734,7 @@ All code, data processing scripts, trained models, and evaluation tools are avai
 
 **Figure A1: Detailed Confusion Matrices for All Models**
 
-See `plots/05_confusion_matrices.png` for visual representation.
+See `figures/05_confusion_matrices.png` for visual representation.
 
 ```
 MiniGPT-4 (89.33% accuracy):
@@ -778,13 +778,13 @@ Actual Success  170 (83%) 36 (17%)
 
 **Figure A2: Calibration Curves for All Models**
 
-See `plots/08_calibration_plots.png` for complete reliability diagrams showing predicted confidence vs. actual accuracy for all models before and after temperature scaling.
+See `figures/08_calibration_plots.png` for complete reliability diagrams showing predicted confidence vs. actual accuracy for all models before and after temperature scaling.
 
 ### A.4 Learning Curves
 
 **Figure A3: Training Dynamics for All Models**
 
-See `plots/02_training_dynamics.png` and `plots/10_training_stability.png` for complete training and validation loss/accuracy curves over epochs, including learning rate schedules and gradient norms.
+See `figures/02_training_dynamics.png` and `figures/10_training_stability.png` for complete training and validation loss/accuracy curves over epochs, including learning rate schedules and gradient norms.
 
 ---
 
